@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 2em;
+  background-color: black;
+  align-items: center;
+}
+
+iframe {
+  position: absolute;
+  display: block;
+  bottom: 1em;
+}
