@@ -10,24 +10,30 @@
   </head>
   <body>
     <br/><br/>
-    <button data-waxml-click-trig="music">PLAY</button>
+    <button class="button" data-waxml-click-trig="music">play</button>
     <br/><br/>
 
-    <div>CHANNEL PAN</div>
-    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_C=this.value" />
+    <div class="h1">channel pan</div>
+    <br>
+    <label>drums</label>
+    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_C=this.value">
     <br/><br/>
+    <label>bass</label>
     <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_D=this.value" />
     <br/><br/>
+    <label>guitar</label>
     <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_E=this.value" />
     <br/><br/>
+    <label>vocals</label>
     <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_F=this.value" />
     <br><br>
-    <div>VOLUME</div>
+    <div class="h1">volume</div>
+    <br>
     <div class="pad" id="pad">
-      <div class="label left">DRUMS</div>
-      <div class="label right">BASS</div>
-      <div class="label top">GUITAR</div>
-      <div class="label bottom">VOCALS</div>
+      <div class="label left">drums</div>
+      <div class="label right">bass</div>
+      <div class="label top">guitar</div>
+      <div class="label bottom">vocals</div>
 
       <div class="knob" id="knob"></div>
     </div>

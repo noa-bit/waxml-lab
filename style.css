@@ -5,25 +5,28 @@ html, body {
   align-items: center;
 }
 
+.h1 {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
 iframe {
   position: absolute;
   display: block;
   bottom: 1em;
 }
 
-
 .pad {
   width: 250px;
   height: 250px;
-  background: linear-gradient(to right, #bbb, #eee);
+  background: linear-gradient(to right, #c2c2c2, #eee);
   position: relative;
   touch-action: none;
-  border: 2px solid #999;
+  border: 2px solid #d4d4d4;
   border-radius: 8px;
   user-select: none;
-  font-family: sans-serif;
   font-weight: bold;
-  color: #444;
+  color: #000000;
 }
 
 .knob {
