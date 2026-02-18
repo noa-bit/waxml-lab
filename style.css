@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 2em;
-  background-color: black;
+  background-color: rgb(204, 233, 232);
   align-items: center;
 }
 
@@ -10,3 +10,43 @@ iframe {
   display: block;
   bottom: 1em;
 }
+
+
+.pad {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to right, #bbb, #eee);
+  position: relative;
+  touch-action: none;
+  border: 2px solid #999;
+  border-radius: 8px;
+  user-select: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #444;
+}
+
+.knob {
+  width: 22px;
+  height: 22px;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.left   { left: 6px;  top: 50%; transform: translateY(-50%); }
+.right  { right: 6px; top: 50%; transform: translateY(-50%); }
+
+.top    { top: 6px; left: 50%; transform: translateX(-50%); }
+.bottom { bottom: 6px; left: 50%; transform: translateX(-50%); }

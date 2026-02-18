@@ -7,18 +7,14 @@
   xsi:schemaLocation="https://www.w3schools.com https://momdev.se/lindetorp/imusic/scheme_1.1.9.xsd"
   
   version="1.0" 
-  tempo="120" 
-  timeSign="4/4">
+  tempo="94" 
+  timeSign="5/4">
 
   <arrangement class="music">
-    <track loopLength="2" src="audio/percussion-120bmp-2bars.mp3" output="#mix1-A" />
-    <track loopLength="4" src="audio/drums-120bmp-4bars.mp3" output="#mix1-B" />
-    <track loopLength="8" src="audio/dru ms-120bmp-4bars.mp3" output="#mix1-C" />
-    <track loopLength="8" src="audio/drums-120bmp-4bars.mp3" output="#mix1-D" />
-    <track loopLength="8" src="audio/drums-120bmp-4bars.mp3" output="#mix1-E" />
-    <track loopLength="8" src="audio/drums-120bmp-4bars.mp3" output="#mix1-D" />
-    <track loopLength="8" src="audio/drums-120bmp-4bars.mp3" output="#mix1-C" />
-    <track loopLength="8" src="audio/drums-120bmp-4bars.mp3" output="#mix1-D" />
+    <track loopLength="88" src="audio/15-step-drums.mp3" output="#mix1-C" />
+    <track loopLength="88" src="audio/15-step-bass.mp3" output="#mix1-D" />
+    <track loopLength="88" src="audio/15-step-guitar.mp3" output="#mix1-E" />
+    <track loopLength="88" src="audio/15-step-vocals.mp3" output="#mix1-F" />
   </arrangement>
 
 </imusic>

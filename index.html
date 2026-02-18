@@ -11,14 +11,72 @@
   <body>
     <br/><br/>
     <button data-waxml-click-trig="music">PLAY</button>
-    <input type="range" value="0" min="0" max="1" step="0.01" data-waxml-input-set="intensity=this.value" />
-    
-    
+    <br/><br/>
+
+    <div>CHANNEL PAN</div>
+    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_C=this.value" />
+    <br/><br/>
+    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_D=this.value" />
+    <br/><br/>
+    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_E=this.value" />
+    <br/><br/>
+    <input type="range" value="0" min="-1" max="1" step="0.01" data-waxml-input-set="panValue_F=this.value" />
+    <br><br>
+    <div>VOLUME</div>
+    <div class="pad" id="pad">
+      <div class="label left">DRUMS</div>
+      <div class="label right">BASS</div>
+      <div class="label top">GUITAR</div>
+      <div class="label bottom">VOCALS</div>
+
+      <div class="knob" id="knob"></div>
+    </div>
+
     <script src="script/WebAudioXML.js" data-source="audio.xml"></script>
     <script src="script/imusic_091.js" data-music-structure="music.xml"></script>
     
     <script type="text/javascript" src="script/script.js"></script>
     <script type="text/javascript" src="sketch.js"></script>
-    
+
+    <script>
+    const pad = document.getElementById("pad");
+    const knob = document.getElementById("knob");
+
+    let dragging = false;
+
+    pad.addEventListener("pointerdown", e => {
+      dragging = true;
+      update(e);
+    });
+
+    window.addEventListener("pointermove", e => {
+      if (dragging) update(e);
+    });
+
+    window.addEventListener("pointerup", () => {
+      dragging = false;
+    });
+
+    function update(e) {
+      const r = pad.getBoundingClientRect();
+
+      let x = (e.clientX - r.left) / r.width;
+      let y = (e.clientY - r.top) / r.height;
+
+      x = Math.max(0, Math.min(1, x));
+      y = Math.max(0, Math.min(1, y));
+
+      knob.style.left = `${x * 100}%`;
+      knob.style.top  = `${y * 100}%`;
+
+      if (window.waxml) {
+        waxml.setVariable("intensity_C", x);
+        waxml.setVariable("intensity_D", 1-x);
+        waxml.setVariable("intensity_E", y);
+        waxml.setVariable("intensity_F", 1-y);
+      }
+    }
+    </script>
+
   </body>
 </html>

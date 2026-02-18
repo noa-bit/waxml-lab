@@ -2,11 +2,21 @@
 
 <Audio version="1.0" timeUnit="ms" gain="-3dB" controls="true">
 
-      <!-- PERCUSSION & DRUMS (blending 100%) -->
-      <Mixer crossFadeRange="1" mix="$intensity">
-          <GainNode id="mix1-A" />
-          <GainNode id="mix1-B" />
+      <!-- DRUMS, BASS (blending 100%) -->
+      <Mixer crossFadeRange="1" mix="$intensity_C" >
+          <GainNode id="mix1-C" />
+          <StereoPannerNode id="mix1-C" pan="$panValue_C"/>
+          <GainNode id="mix1-D" />
+          <StereoPannerNode id="mix1-D" pan="$panValue_D"/>
+
       </Mixer>
-  
-  
+      
+      <!-- GUITAR, VOCALS (blending 100%) -->
+      <Mixer crossFadeRange="1" mix="$intensity_E">
+          <GainNode id="mix1-E" />
+          <StereoPannerNode id="mix1-E" pan="$panValue_E"/>
+          <GainNode id="mix1-F" />
+          <StereoPannerNode id="mix1-F" pan="$panValue_F"/>
+      </Mixer>
+
 </Audio>
