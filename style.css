@@ -3,6 +3,7 @@ html, body {
   padding: 2em;
   background-color: rgb(204, 233, 232);
   align-items: center;
+  font-family: sans-serif;
 }
 
 .h1 {

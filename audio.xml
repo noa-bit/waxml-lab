@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Audio version="1.0" timeUnit="ms" gain="-3dB" controls="true">
+<Audio version="1.0" timeUnit="ms" controls="true">
+    <Chain gain="-3dB">
 
-      <!-- DRUMS, BASS (blending 100%) -->
-      <Mixer crossFadeRange="1" mix="$intensity_C" >
-          <GainNode id="mix1-C" />
-          <StereoPannerNode id="mix1-C" pan="$panValue_C"/>
-          <GainNode id="mix1-D" />
-          <StereoPannerNode id="mix1-D" pan="$panValue_D"/>
+        <Mixer crossFadeRange="1" mix="$intensity_C">
 
-      </Mixer>
-      
-      <!-- GUITAR, VOCALS (blending 100%) -->
-      <Mixer crossFadeRange="1" mix="$intensity_E">
-          <GainNode id="mix1-E" />
-          <StereoPannerNode id="mix1-E" pan="$panValue_E"/>
-          <GainNode id="mix1-F" />
-          <StereoPannerNode id="mix1-F" pan="$panValue_F"/>
-      </Mixer>
+            <GainNode id="mix1-C">
+                <StereoPannerNode id="mix1-C" pan="$panValue_C"/>
+            </GainNode>
 
+            <GainNode id="mix1-D">
+                <StereoPannerNode id="mix1-D" pan="$panValue_D"/>
+            </GainNode>
+
+        </Mixer>
+
+        <Mixer crossFadeRange="1" mix="$intensity_E">
+
+            <GainNode id="mix1-E">
+                <StereoPannerNode id="mix1-E" pan="$panValue_E"/>
+            </GainNode>
+
+            <GainNode id="mix1-F">
+                <StereoPannerNode id="mix1-F" pan="$panValue_F"/>
+            </GainNode>
+
+        </Mixer>
+
+    </Chain>
 </Audio>
