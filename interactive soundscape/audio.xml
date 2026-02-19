@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio 
+
+    xmlns="https://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.w3schools.com https://momdev.se/lindetorp/waxml/scheme_1.23.xsd"
+
+    version="1.0" 
+    timeUnit="ms" 
+    gain="0dB"
+    controls="show">
+
+    <AmbientAudio start="auto" src="audio/ambience.mp3" />
+  
+    <ObjectBasedAudio class="sound1" positionX="0" positionZ="-30" src="audio/bird1.mp3" loop="true"/>
+    <ObjectBasedAudio class="sound2"  positionX="-20" positionZ="30" src="audio/bird2.mp3" loop="true"/>
+    <ObjectBasedAudio class="sound3"  positionX="30" positionZ="50" src="audio/bird2.mp3" loop="true"/>
+    <ObjectBasedAudio class="sound4"  positionX="-40" positionZ="-10" src="audio/bird2.mp3" loop="true"/>
+    <ObjectBasedAudio class="sound5"  positionX="50" positionZ="-20" src="audio/bird2.mp3" loop="true"/>
+
+    
+</Audio>
