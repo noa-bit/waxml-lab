@@ -10,13 +10,12 @@
     gain="0dB"
     controls="show">
 
-    <AmbientAudio start="auto" src="audio/ambience.mp3" />
+    <AmbientAudio gain="-10dB" start="auto" src="audio/nyc.wav" />
   
-    <ObjectBasedAudio class="sound1" positionX="0" positionZ="-30" src="audio/bird1.mp3" loop="true"/>
-    <ObjectBasedAudio class="sound2"  positionX="-20" positionZ="30" src="audio/bird2.mp3" loop="true"/>
-    <ObjectBasedAudio class="sound3"  positionX="30" positionZ="50" src="audio/bird2.mp3" loop="true"/>
-    <ObjectBasedAudio class="sound4"  positionX="-40" positionZ="-10" src="audio/bird2.mp3" loop="true"/>
-    <ObjectBasedAudio class="sound5"  positionX="50" positionZ="-20" src="audio/bird2.mp3" loop="true"/>
+    <ObjectBasedAudio gain="-10dB" class="frenchpeople" positionX="5" positionZ="-2" src="audio/frenchpeople.mp3" loop="false"/>
+    <ObjectBasedAudio gain="0dB" class="shooting"  positionX="-5" positionZ="5" src="audio/shooting.mp3" loop="false"/>
+    <ObjectBasedAudio gain="0dB" class="shootout"  positionX="3" positionZ="3" src="audio/shootout.mp3" loop="false"/>
+    <ObjectBasedAudio gain="0dB" class="outro"  positionX="-4" positionZ="-2" src="audio/outro.mp3" loop="false"/>
 
     
 </Audio>
