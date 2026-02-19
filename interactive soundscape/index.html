@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ObjectBasedAudio and AmbientAudio</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />    
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+	</head>
+
+
+	<body>
+      <h1>3D-audio</h1>
+      <h3>ObjectBasedAudio and AmbientAudio</h3>
+
+
+      <h2>Trigg separate audio objects</h2>
+      <p>With HTML-attribute:</p>
+      <button data-waxml-click-start="bird1">Bird 1</button>
+      <textarea><button data-waxml-click-start="bird1">Bird 1</button></textarea>
+
+      <p>With javascript:</p>
+      <button onclick="waxml.start('bird2');">Bird 2</button>
+      <textarea><button onclick="waxml.start('bird2');">Bird 2</button></textarea>
+
+
+      <script src="script/WebAudioXML.js" data-source="audio.xml"></script>
+      <script src="sketch.js"></script>
+      <script src="script/script.js"></script>
+	</body>
+</html>
