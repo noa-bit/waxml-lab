@@ -7,14 +7,14 @@
   xsi:schemaLocation="https://www.w3schools.com https://momdev.se/lindetorp/imusic/scheme_1.1.9.xsd"
   
   version="1.0" 
-  tempo="94" 
-  timeSign="5/4">
+  tempo="84" 
+  timeSign="4/4">
 
   <arrangement class="music">
-    <track loopLength="88" src="audio/15-step-drums.mp3" output="#mix1-C" />
-    <track loopLength="88" src="audio/15-step-bass.mp3" output="#mix1-D" />
-    <track loopLength="88" src="audio/15-step-guitar.mp3" output="#mix1-E" />
-    <track loopLength="88" src="audio/15-step-vocals.mp3" output="#mix1-F" />
+    <track loopLength="8" src="audio/rhythm_clean.mp3" output="#mix1-C" />
+    <track loopLength="8" src="audio/rhtyhm_dirty.mp3" output="#mix1-D" />
+    <track loopLength="8" src="audio/harmony_clean.mp3" output="#mix1-E" />
+    <track loopLength="8" src="audio/harmony_dirty.mp3" output="#mix1-F" />
   </arrangement>
 
 </imusic>
